@@ -35,7 +35,18 @@ _.indexOf = function(collection, target){
 	return result; 
 }//endindexof
 
+	// *** Filter ***
+// _.filter takes a collection and a predicate function, also known as a truth test. Return an array of all elements of the collection that pass the truth test, ie return a truthy value from the predicate function. Consider reusing _.each here.
 
+_.filter = function(collection, callback){
+	results = [];
+	each(collection, function(item){
+		if(callback(item)){
+			results.push(item);
+		}//endif
+	})//endeach
+	return results; 
+}//endfilter
 
 
 })();
