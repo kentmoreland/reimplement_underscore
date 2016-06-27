@@ -48,5 +48,15 @@ _.filter = function(collection, callback){
 	return results; 
 }//endfilter
 
+// _.reject works similiarly to _.filter but returns an array of all elements that don't pass the truth test. Use _.filter in your implementation.
+_.reject = function(collection, callback){
+	results = [];
+	_.filter(collection, function(item){
+		if(!callback(item)){
+			results.push(item);
+		}//endif
+		return results;
+	})//endfilter
+}
 
 })();
