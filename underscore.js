@@ -1,8 +1,8 @@
 // My underscore re-implementation 
 // R. Kent Moreland II - 2016
 (function(){
-	exports = module.exports = _;
-	exports._ = _;
+	module.exports = _ = {};
+
 
 
 	// *** Each ***
