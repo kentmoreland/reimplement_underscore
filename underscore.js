@@ -59,6 +59,7 @@ _.reject = function(collection, callback){
 	})//endfilter
 }
 
+// _.uniq produces a duplicate free version of an array. Use _.filter and _.indexOf in your implementation.
 _.uniq = function(collection, callback){
 	results = [];
 	_.filter(collection, function(item){
@@ -69,5 +70,14 @@ _.uniq = function(collection, callback){
 	})//endfilter
 	return results; 
 }//enduniq
+
+// _.map works a lot like _.each. It takes a collection and iterator, and calls the iterator on every element of the array. However, _.map returns an results array of the transformed values.
+_.map = function(collection, callback){
+	var results = []
+	_.each(collection, function(item){
+		results.push(callback(item));
+	}//endeach
+	return results; 
+}//endmap
 
 })();
