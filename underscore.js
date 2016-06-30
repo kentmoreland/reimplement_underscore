@@ -59,4 +59,15 @@ _.reject = function(collection, callback){
 	})//endfilter
 }
 
+_.uniq = function(collection, callback){
+	results = [];
+	_.filter(collection, function(item){
+		if(_.indexOf(results, item) < 0){
+			results.push(item);
+		} 
+		return results; 
+	})//endfilter
+	return results; 
+}//enduniq
+
 })();
