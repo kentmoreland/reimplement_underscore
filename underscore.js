@@ -80,4 +80,12 @@ _.map = function(collection, callback){
 	return results; 
 }//endmap
 
+// _.pluck takes an array of objects and returns an array of the values of a certain property in it. Ex. take an array of people objects and return an array of just their ages. Use _.map in your implementation.
+_.pluck = function(array, propName){
+	return _.map(array, function(object){
+		return (object[propName]); 
+	})//endmap
+}//endpluck
+
+
 })();
