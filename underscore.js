@@ -88,4 +88,20 @@ _.pluck = function(array, propName){
 }//endpluck
 
 
+// _.reduce reduces an array or object to a single value by repetitively calling iterator(accumulator, item) for each item. accumulator should be the return value of the previous iterator call. Reduce takes a collection, an iterator, and an optional third argument of a starting value. Where no starting value is provided, the first element is used as the starting value and the iterator is not called on the first value.
+
+_.reduce = function(collection, callback, memo){
+	var memoSet; 
+	arguments.length < 3 ? memoSet = false : memoSet = true;
+	_.each(collection, function(item, index){
+		if(!memoSet && index === 0){
+			memo = item; 
+		}else{
+			memo = callback(memo, item);
+		}//endif
+	})//endeach
+	return memo;
+}//endreduce
+
+
 })();
