@@ -103,5 +103,14 @@ _.reduce = function(collection, callback, memo){
 	return memo;
 }//endreduce
 
+_.every = function(collection, callback){
+	return _.reduce(collection, function(memo, item){
+		if(!callback(item)){
+			memo = false;
+		}//endif
+		return memo;
+	}, true)//endreduce
+}//endevery
+
 
 })();
