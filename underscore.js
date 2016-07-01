@@ -103,6 +103,8 @@ _.reduce = function(collection, callback, memo){
 	return memo;
 }//endreduce
 
+
+// _.every determines whether all ements of a collection pass a truth test. It takes a collection and a predicate function. Use _.reduce in your implementation.
 _.every = function(collection, callback){
 	return _.reduce(collection, function(memo, item){
 		if(!callback(item)){
@@ -112,5 +114,17 @@ _.every = function(collection, callback){
 	}, true)//endreduce
 }//endevery
 
+
+// _.some determines whether some eleements of a collection pass a truth test. It takes a collection and a predicate function. You could use _.reduce here, but there is a clever way to re-use _.every.
+
+_.some = function(collection, callback){
+	return !_.every(collection, function(item){
+		if(callback(item)){
+			return true; 
+		}else{
+			return false;
+		}
+	});
+}//endsome
 
 })();
