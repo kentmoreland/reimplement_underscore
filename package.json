@@ -1,0 +1,28 @@
+{
+  "name": "reimplementing-underscore",
+  "version": "1.0.0",
+  "description": "My reimplementation of the Underscore.js functional programming library. This exercise is to serve as a conduit for my better understanding of functional programming methods.",
+  "main": "underscore.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentmoreland/reimplement_underscore.git"
+  },
+  "keywords": [
+    "underscore"
+  ],
+  "author": "Kent <kentmoreland@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentmoreland/reimplement_underscore/issues"
+  },
+  "homepage": "https://github.com/kentmoreland/reimplement_underscore#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "mocha": "^3.2.0"
+  }
+}
